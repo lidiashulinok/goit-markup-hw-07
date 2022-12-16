@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
     width: 1128px;
     padding-left: 15px;
     padding-right: 15px;
-    outline: solid 2px tomato;
+    /* outline: solid 2px tomato; */
   }
 
   /* header */
@@ -94,7 +94,7 @@ letter-spacing: 0.02em;
  }
 .nav-link:hover,
 .nav-link:focus { 
-  color: red;
+  color: var(--primery-brand-color);
   
 }
 
@@ -137,13 +137,13 @@ border: none;
   padding-bottom: 120px;
  }
  .benefits-title{
-  padding-left: 200px;
  margin-bottom: 8px;
   font-weight: 700;
 font-size: 20px;
 line-height: calc(24/20);
 letter-spacing: 0.02em;
 color:var(--title-text-color)
+te
 
  }
 .benefits-text{
@@ -190,19 +190,20 @@ mix-blend-mode: normal;
 flex: none;
 order: 0;
 flex-grow: 0;
-padding-top: 72px;
 }
 .our-team-name{
   font-weight: 500;
 font-size: 20px;
 line-height: 1.2;
 letter-spacing: 0.02em;
+color: var(--title-text-color);
 }
 .our-team-text{
   font-weight: 400;
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
+color: var(--description-text-color);
 
 }
 
