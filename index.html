@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/styles.css">
   </head>
 
@@ -13,11 +13,15 @@
 
     <!--Page header-->
     <header class="header">
-      <div class="container">
-      <!-- logo -->
+      
+      <div class="container main-nav">
+      <!-- logo --> 
       <a href="./index.html" class="logo link"><span class="first-part-logo">web</span>studio</a> 
-      <nav class="nav">
+
+      <nav class="nav-site">
+
         <ul class="nav-list list link">
+
           <li class="nav-item"><a class="nav-link link" href="./index.html">Studio</a></li>
           <li class="nav-item"><a class="nav-link link" href="./portfolio.html">Portfolio</a></li>
           <li class="nav-item"><a class="nav-link link" href="">Contacts</a></li>
@@ -25,10 +29,12 @@
       </nav>
 
       <ul class="nav-list-cn list">
-        <li><a class="header-em link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-        <li><a class="header-tel link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+
+        <li class="nav-item"><a class="header-em link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+        <li class="nav-item"><a class="header-tel link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+
       </ul>
-    </div>
+      </div>
     </header>
       
     <main>
@@ -42,7 +48,7 @@
       <!--Benefits-->
       
       <section class="benefits" >
-        <div class="container">
+        <div class="container ">
         <ul class="benefits-list list">
           <li class="benefits-item">
             
@@ -104,39 +110,64 @@
 
        <!--Our team-->
       <section class="our-team" >
+
         <div class="container">
-       
+
         <h2 class="our-team-title">Our team</h2>
 
         <ul class="our-team-list list">
+
           <li class="our-team-item">
-            <img
-              src="./img/our-team/mark1.jpg"
-              alt="man-with-beard-dark-hair" width="264"
-            />
+            <article class="card">
+           <div class="card-thumb">
+            <img src="./img/our-team/mark1.jpg"
+              alt="man-with-beard-dark-hair" width="264"/>
+          </div>
+         <div class="card-content">
             <h3 class="our-team-name">Mark Guerrero</h3>
             <p class="our-team-text">Product Designer</p>
+          </div>
+          </article>
           </li>
 
           <li class="our-team-item">
-            <img src="./img/our-team/tom2.jpg" alt="redhead-man" width="264"/>
+            <article class="card">
+          <div class="card-thumb">
+            <img src="./img/our-team/tom2.jpg"
+             alt="redhead-man" width="264"/>
+          </div>
+             <div class="card-content">
             <h3 class="our-team-name">Tom Ford</h3>
             <p class="our-team-text">Frontent Developer</p>
+           </div>
+           </article>
           </li>
 
           <li class="our-team-item">
+            <article class="card">
+             <div class="card-thumb">
             <img
               src="./img/our-team/camila3.jpg"
-              alt="girl-long-hair-in-pink-sweater" width="264"
-            />
+              alt="girl-long-hair-in-pink-sweater" width="264"/>
+             </div>
+             <div class="card-content">
             <h3 class="our-team-name">Camila Garcia</h3>
             <p class="our-team-text">Marketing</p>
+          </div>
+          </article>
           </li>
 
           <li class="our-team-item">
-            <img src="./img/our-team/man4.jpg" alt="man-beautiful-hair" width="264"/>
+            <article class="card">
+              <div class="card-thumb">
+              <img src="./img/our-team/man4.jpg"
+               alt="man-beautiful-hair" width="264"/>
+              </div>
+              <div class="card-content">
             <h3 class="our-team-name">Daniel Wilson</h3>
             <p class="our-team-text">Ul Designer</p>
+          </div>
+        </article>
           </li>
         </ul>
       </div>
@@ -154,3 +185,6 @@
     </footer>
   </body>
 </html>
+
+
+
