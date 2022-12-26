@@ -342,7 +342,7 @@ text-align: center;
   
 }
 .portfolio-nav{
-  padding-bottom: 120px;
+ margin-bottom: 72px;
 }
 
 .portfolio-btn-list{
@@ -380,9 +380,13 @@ color:var(--title-text-light-color);
 background:var(--primery-brand-color);}
 
 .card-content-portfolio{
-  box-shadow: var(--card-shadow);
+  
   padding-top: 32px;
   padding-bottom: 32px;
+  padding-left: 16px;
+  border: 1px solid #E7E9FC;
+  border-top: none;
+
 }
 
 .portfolio-list{
@@ -397,7 +401,10 @@ background:var(--primery-brand-color);}
     flex-basis: calc((100% - 48px)/ 3);
  }
  
- 
+.portfolio-item{
+  box-shadow:var(--card-shadow);
+}
+
 .portfolio-title{
 font-weight: 700;
 font-size: 20px;
