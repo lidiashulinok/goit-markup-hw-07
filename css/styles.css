@@ -51,9 +51,6 @@
   margin-left: 78px;
 }
   
-   /* outline: solid 2px ;  */
-   /* background-color: var(--title-text-light-color) */
-  
   .header{
    border-bottom: 1px solid #E7E9FC;
    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -131,11 +128,11 @@ color:var(--title-text-color);
 .nav-mailto{
   outline:1px solid ;
   margin-right: 40px;
-  background: #4D5AE5;
+  background:var(--primery-brand-color);
   
 }
 .header-em{
-  /* font-family: 'Roboto'; */
+
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -144,7 +141,7 @@ color:var(--title-text-color);
 
 }
  .header-tel{
-  /* font-family: 'Roboto'; */
+
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -213,15 +210,17 @@ border: none;
  }
  .benefits-list {
   display: flex;
-  column-gap: 24px;
-  /* justify-content: center;  */
+  gap: 24px;
+ 
  }
  .benefits-wrap{
+  display:flex;
   width: 264px;
   height: 112px;
   border-radius: 4px;
   margin-bottom: 8px;
   background-color:var(--body-background-color);
+  
  }
  .benefits-icon{
   position: relative;
@@ -244,34 +243,6 @@ border: none;
   margin-bottom: 8px;
   border-radius: 4px;
 }
-
-/* .benefits-item::before{
-  content:'';
-width:264px;
-height:112px;
-border-radius:4px;
-display:block;
-  background-repeat: no-repeat;
-  background-color:var(--body-background-color);
-  background-position:center;
-}
- .icon-strategy::before{
-  background-image: url(../img/icons/antenna.svg);
-}
-.icon-punctuality::before{
-  background-image: url(../img/icons/clock\ .svg);
-}
-.icon-diligence::before{
-  background-image: url(../img/icons/diagram.svg);
-}
-.icon-technologies::before{
-  background-image: url(../img/icons/astronaut\ .svg);
-}
-
-
- .benefits-list .benefits-item + .benefits-item { 
-  margin-left: 24px;
- } */
  
  .benefits-title{
   margin-top: 8px;
@@ -293,9 +264,9 @@ color: var(--description-text-color);
 width: 264px;
 }
 
-/* examples */
+
 .examples{
-  /* padding-bottom: 238px; */
+ 
    padding-bottom: 120px; 
 }
 
@@ -319,11 +290,12 @@ margin-bottom: 72px;
 
 
 }
-/* our-team */
+/* Our-team */
+
 .our-team{
   padding-top: 120px;
   padding-bottom: 120px;
-  background:var(--body-background-color)
+  background:#F4F4FD;
 }
 .our-team-title{
   font-weight: 700;
@@ -340,7 +312,10 @@ margin-bottom: 72px;
   background-color:var(--success-messages);
 }
  
-/* .our-team-list{ */
+ .our-team-list{
+  border-right: #4D5AE5;
+  border-left:#31D0AA;
+ }
 
 
 /* CARD-SET */
@@ -362,11 +337,6 @@ margin-bottom: 72px;
 .our-team-item{
   width:calc((100% - 48px) / 3);
 }
-
-/* .our-team-list .our-team-item + .our-team-item {
-  margin-left: 24px;
-} */
-
 
 .card-content{
   padding-top: 32px;
@@ -397,6 +367,7 @@ letter-spacing: 0.02em;
 color: var(--description-text-color);
 text-align: center;
 margin-bottom: 8px;
+margin-top: 8px;
 }
 .our-team-soc-list {
   display: flex;
@@ -446,8 +417,7 @@ color: #2E2F42
   gap:24px;
  }
  .customers-item{
-  width: calc((100%-48px)/6);
-
+  width: calc((100% - 48px) / 6);
  }
 .customers-link{
   display: flex;
@@ -500,7 +470,6 @@ line-height: 1.5;
 display: flex;
 align-items: center;
 text-align: center;
-text-transform: uppercase;
 cursor: pointer;
 padding-top: 96px;
 border: none;
@@ -509,6 +478,7 @@ letter-spacing: 0.04em;
 border-radius: 4px;
  background-color: #E7E9FC; 
  color: var(--primery-brand-color); 
+ margin-bottom: 72px;
 
 
  }
@@ -568,7 +538,8 @@ margin-bottom: 8px;
   color: var(--description-text-color);
 }
 
-/* footer */
+ /* Footer */
+
 .footer{
 
 padding-top: 100px;
@@ -623,16 +594,9 @@ color: var(--title-text-light-color);
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  /* display: flex;
-  align-items: center;
-  justify-content: center;  */
-
+ 
 }
-/* .footer-wrap{
-  display: flex;
-  justify-content: baseline;
-  gap:16px;
-} */
+
 .footer-icon{
   fill:var(--body-background-color);
 
