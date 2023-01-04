@@ -1,9 +1,11 @@
 
   :root{
     --primery-brand-color:#4D5AE5;
+    --success-messages:#31D0AA;
     --title-text-color: #2E2F42;
     --description-text-color: #434455;
     --title-text-light-color: #FFFFFF;
+    --body-background-color: #f5f5f5;
     --card-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);   
   }
   h1, h2, h3, h4, h5, h6, p, ul {
@@ -12,7 +14,8 @@
 
     body {
      font-family: 'Roboto', sans-serif;
-     background-color: var(--title-text-light-color);}
+     background-color: var(--body-background-color);
+    }
 
      .container {
       margin-left: auto;
@@ -27,9 +30,6 @@
       max-width: 100%;
       height: auto;}
      
-  
-
-
 
 *{
   box-sizing: border-box;
@@ -155,7 +155,22 @@ color:var(--title-text-color);
   padding-bottom: 192px;
   background: var(--title-text-color);
   text-align: center;
+  background-image:linear-gradient(to right,rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),
+  url(../img/hero-image/people-office\ 1\ \(2\).jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  margin: auto;
+  max-width: 1440px;
+  height: 600px;
  }
+
+.overlay{
+  max-width: 1600px;
+  height: 600px;
+  outline: 1px solid black;
+}
+
  .hero-title{
   color:var(--title-text-light-color);  
   font-weight: 600;
@@ -167,6 +182,7 @@ color:var(--title-text-color);
   margin-bottom: 48px;
   margin-left: auto;
   margin-right: auto;
+  
  }
  .hero-btn{
   
@@ -190,15 +206,39 @@ border: none;
  }
  .benefits-list {
   display: flex;
-  justify-content: center;
-  
-   
+  justify-content: center; 
  }
+ 
+.benefits-item::before{
+  content:'';
+width:264px;
+height:112px;
+border-radius:4px;
+display:block;
+  background-repeat: no-repeat;
+  background-color:var(--title-text-light-color);
+  background-position:center;
+}
+ .icon-strategy::before{
+  background-image: url(../img/icons/antenna.svg);
+}
+.icon-punctuality::before{
+  background-image: url(../img/icons/clock\ .svg);
+}
+.icon-diligence::before{
+  background-image: url(../img/icons/diagram.svg);
+}
+.icon-technologies::before{
+  background-image: url(../img/icons/astronaut\ .svg);
+}
+
+
  .benefits-list .benefits-item + .benefits-item { 
   margin-left: 24px;
  }
  
  .benefits-title{
+  margin-top: 8px;
  margin-bottom: 8px;
 font-weight: 700;
 font-size: 20px;
@@ -245,9 +285,9 @@ margin-bottom: 72px;
 }
 /* our-team */
 .our-team{
-  
+  padding-top: 120px;
   padding-bottom: 120px;
-  background: white; 
+  background:var(--title-text-light-color)
 }
 .our-team-title{
   font-weight: 700;
@@ -259,19 +299,20 @@ margin-bottom: 72px;
   margin-bottom: 72px;
 
 }
+
+.team-soc-link:hover, .team-soc-link:focus{
+  background-color:var(--success-messages);
+}
  
 /* .our-team-list{ */
-.our-team{
-  background: #F4F4FD;
-   padding-top: 120px;
-}
+
 
 /* CARD-SET */
 .card{
   box-shadow: var(--card-shadow);
  border-radius:  0px 0px 4px 4px;
   overflow: hidden;
-  background-color: #FFFFFF;
+  background-color:var(--title-text-light-color);
 }
 .our-team-list{
   outline: none;
@@ -279,33 +320,28 @@ margin-bottom: 72px;
   margin: 0;
   list-style: none;
   display: flex;
+  gap:24px;}
 
 
+.our-team-item{
+  width:calc((100% - 48px) / 3);
 }
 
-.our-team-list .our-team-item + .our-team-item {
+/* .our-team-list .our-team-item + .our-team-item {
   margin-left: 24px;
+} */
+
+
+.card-content{
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-right: 16px;
+  padding-left: 16px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+border-radius: 0px 0px 4px 4px;
+background:var(--title-text-light-color);
 }
 
-/* .our-team-list > .our-team-item{
-  outline: 1px solid none;
-  flex-basis: cal(100% / 4 - 24px );
-  margin-left: 24px;
-  
-} */
-/* .card-thumb{
-  outline: solid ;
-}
-
-.our-team-item *{
-outline: solid ;
-} */
-/* .our-team-item{
-/* url(man-with-laptop-presenting-something.jpg); */
-/* mix-blend-mode: normal;
-flex: none;
-order: 0;
-flex-grow: 0; }*/
 
 .our-team-name{
   font-weight: 500;
@@ -313,24 +349,79 @@ font-size: 20px;
 line-height: 1.2;
 letter-spacing: 0.02em;
 color: var(--title-text-color);
-text-align: center;
+text-align: center;}
 
-}
-.card-content{
-  padding: 32px;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-border-radius: 0px 0px 4px 4px;
-background: #FFFFFF;
-}
+
+
 .our-team-text{
-  font-weight: 400;
+font-weight: 400;
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: var(--description-text-color);
 text-align: center;
-
+margin-bottom: 8px;
 }
+.our-team-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  
+}
+
+.our-team-soc-item{
+  width: 40px;
+  height: 40px;
+}
+
+.our-team-soc-link{
+  width: 100%;
+  height: 100%;
+  background-color:var(--primery-brand-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+} 
+ .our-team-soc-icon{
+ 
+ }
+ 
+ /* Customers */
+
+ .customers{
+  padding-top: 130px;
+  padding-bottom: 120px;
+ }
+.customers-title{
+margin-bottom: 72px;
+font-weight: 700;
+font-size: 36px;
+line-height:calc(40/36);
+text-align: center;
+letter-spacing: 0.02em;
+color: #2E2F42
+}
+ .customers-list{
+  display: flex;
+  gap:24;
+ }
+ .customers-item{
+  width: calc((100%-48px)/6);
+
+ }
+.customers-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border:1px solid red;
+  border-radius: 4px;
+
+ 
+} 
+  .customers-icon{}
 
 .p{
   /* color:none; */
@@ -383,6 +474,7 @@ background:var(--primery-brand-color);}
   
   padding-top: 32px;
   padding-bottom: 32px;
+  padding-right:16px;
   padding-left: 16px;
   border: 1px solid #E7E9FC;
   border-top: none;
@@ -397,7 +489,7 @@ background:var(--primery-brand-color);}
 
 }
 
-  .portfolio-list {
+.portfolio-list {
     flex-basis: calc((100% - 48px)/ 3);
  }
  
@@ -451,5 +543,15 @@ color: var(--title-text-light-color);
 width: 264px;
 margin-top: 16px;
 }
+.soc-box-footer{}
+.soc-text{
+  font-size: 16px;
+font-weight: 500;
+letter-spacing: 0.32px;
+line-height: 24px;
 
+/* tab-size: 4;
+text-size-adjust:100%; */
+color: #F4F4FD;
 
+}
