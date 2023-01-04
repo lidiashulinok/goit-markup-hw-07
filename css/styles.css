@@ -64,13 +64,14 @@
    justify-content: center;
   }
 
-  header
-   {
-    
+  .header{
    padding-top: 24px;
-    padding-bottom: 24px; }
- 
- 
+   padding-bottom: 24px; }
+
+   .header-em:hover{
+    color:var(--primery-brand-color);
+   }
+
 .logo{
 font-family: 'Raleway';
 font-style: normal;
@@ -212,11 +213,30 @@ border: none;
  }
  .benefits-list {
   display: flex;
-  justify-content: center; 
+  column-gap: 24px;
+  /* justify-content: center;  */
  }
- 
+ .benefits-wrap{
+  width: 264px;
+  height: 112px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  background-color:var(--body-background-color);
+ }
+ .benefits-icon{
+  position: relative;
+  top:24px;
+  left:100px;
+ }
 
-icon-logo{
+ .benefits-item{
+  width: calc((100% - 72px) / 4);
+ }
+ .benefits-text{
+  margin-top: 8px;
+ }
+
+.icon-logo{
   display:flex;
   align-items: center;
   justify-content: center;
@@ -553,10 +573,7 @@ margin-bottom: 8px;
 
 padding-top: 100px;
 padding-bottom: 100px;
-
-  background: var(--title-text-color);
-
-
+background: var(--title-text-color);
 }
 .logo-footer{
   color:var(--title-text-light-color);
@@ -577,27 +594,38 @@ color: var(--title-text-light-color);
 width: 264px;
 margin-top: 16px;
 }
+.footer-box{
+  display:flex;
+  justify-content: start;
+  gap:120px;
+}
 .media{
   font-size: 16px;
 font-weight: 500;
 letter-spacing: 0.02em;
 line-height: 1.5px;
 color: var(--title-text-light-color);
-margin-right: 120px;
+/* margin-right: 120px; */
 }
 .media-list{ 
   display: flex;
   gap: 16px;
   margin-top: 16px;}
 
+  .footer-icon{
+    position: relative;
+    top: 8px;
+    left: 8px;
+  }
+
 .media-item{
   background-color: rgb(255, 255, 255, 0.1);
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;  */
 
 }
 /* .footer-wrap{
