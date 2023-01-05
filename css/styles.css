@@ -305,12 +305,6 @@ margin-bottom: 72px;
   background-color:var(--success-messages);
 }
  
- .our-team-list{
-  border-right: #4D5AE5;
-  border-left:#31D0AA;
- }
-
-
 /* CARD-SET */
 .card{
   box-shadow: var(--card-shadow);
