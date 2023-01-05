@@ -7,7 +7,10 @@
     --description-text-color: #434455;
     --title-text-light-color: #FFFFFF;
     --body-background-color: #f5f5f5;
+    --icons-bcg-color: #F4F4FD;
     --card-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);   
+    --head-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+    --hero-btn-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   }
   h1, h2, h3, h4, h5, h6, p, ul {
     margin: 0;}
@@ -53,7 +56,7 @@
   
   .header{
    border-bottom: 1px solid #E7E9FC;
-   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+   box-shadow:var(--head-shadow);
   }
   .main-nav{
    display:flex;
@@ -85,7 +88,7 @@ font-style: normal;
 font-weight: 700;
 font-size: 18px;
 line-height: 1.3;
-color:var(--primery-brand-color)
+color:var(--primery-brand-color);
 }
 
 .nav-link{
@@ -185,7 +188,7 @@ color:var(--title-text-color);
  }
  .hero-btn{
   
-font-weight: 700;
+font-weight: 500;
 font-size: 16px;
 line-height:calc(19/16) ;
 letter-spacing: 0.04em;
@@ -199,7 +202,7 @@ border: none;
 }
 .hero-btn:hover{
   background-color:var(--primery-brand-color-dark) ;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow:var(--hero-btn-shadow);
 }
 
  /* Benefits */
@@ -212,20 +215,20 @@ border: none;
   display: flex;
   gap: 24px;
  
+ 
  }
  .benefits-wrap{
   display:flex;
-  width: 264px;
   height: 112px;
+  align-items: center;
+  justify-content: center;
   border-radius: 4px;
   margin-bottom: 8px;
-  background-color:var(--body-background-color);
+  background-color:var(--icons-bcg-color);
   
  }
  .benefits-icon{
   position: relative;
-  top:24px;
-  left:100px;
  }
 
  .benefits-item{
@@ -234,16 +237,6 @@ border: none;
  .benefits-text{
   margin-top: 8px;
  }
-
-.icon-logo{
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  padding:24px 0;
-  margin-bottom: 8px;
-  border-radius: 4px;
-}
- 
  .benefits-title{
   margin-top: 8px;
  margin-bottom: 8px;
@@ -295,7 +288,7 @@ margin-bottom: 72px;
 .our-team{
   padding-top: 120px;
   padding-bottom: 120px;
-  background:#F4F4FD;
+  background:var(--icons-bcg-color);
 }
 .our-team-title{
   font-weight: 700;
