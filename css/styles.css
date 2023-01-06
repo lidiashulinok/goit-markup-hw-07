@@ -68,7 +68,12 @@
    padding-top: 24px;
    padding-bottom: 24px; }
 
-   .header-em:hover{
+   .header-em:hover,
+   .header-em:focus {
+    color:var(--primery-brand-color);
+   }
+   .header-tel:hover,
+   .header-tel:focus {
     color:var(--primery-brand-color);
    }
 
@@ -151,6 +156,7 @@ color:var(--title-text-color);
   line-height: 1.5;
   color:var(--description-text-color)
  }
+ 
 
  .hero {
   padding-top: 192px;
@@ -416,20 +422,15 @@ color: #2E2F42
 .customers-link:focus{
   border-color: var(--primery-brand-color);
 }
-.customers-link:hover
-/* .customers-link:focus*/ .customers-icon{ 
+.customers-link:hover .customers-icon,
+ .customers-link:focus .customers-icon{ 
   fill:var(--primery-brand-color);
 }
   .customers-icon{
     fill:#AFB1B8;
   }
-  .customers-icon:hover,
-  .customers-icon:focus{
-    color:var(--primery-brand-color);
-  }
 
-.p{
-
+.p {
   font-size: 20px;
 }
 .portfolio{
@@ -570,37 +571,30 @@ color: var(--title-text-light-color);
   display: flex;
   gap: 16px;
   margin-top: 16px;
-  padding:0;}
-
-  
-.media-item{
-  
-  width: 40px;
-  height: 40px; 
-  border-radius: 50%;
-  background-color: rgb(255, 255, 255, 0.1);
+  padding:0;
 }
-/* .media-link{ */
 
   
-  background-color: rgb(255, 255, 255, 0.1);
 
-.media-link:hover,
+.media-link{
+  width: 40px;
+  height: 40px;
+  background-color:rgb(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+fill:#AFB1B8;
+
+}
+
+ .media-link:hover,
 .media-link:focus
 {
   background-color: var(--success-messages);
-  border-radius:50%;
-}
+} 
 
-.footer-icon{
-  position: relative;
-  top: 8px;
-  left: 8px;
-}
 .footer-icon{
   fill:var(--body-background-color);
 
 }
-/* .team-soc-link:hover, .team-soc-link:focus{
-  background-color:var(--success-messages);
-} */
