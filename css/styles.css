@@ -301,10 +301,6 @@ margin-bottom: 72px;
 
 }
 
-.team-soc-link:hover, .team-soc-link:focus{
-  background-color:var(--success-messages);
-}
- 
 /* CARD-SET */
 .card{
   box-shadow: var(--card-shadow);
@@ -377,7 +373,8 @@ margin-top: 8px;
   align-items: center;
   justify-content: center; 
 } 
-.our-team-soc-link:hover{
+.our-team-soc-link:hover,
+.our-team-soc-link:focus{
   background-color: var(--primery-brand-color-dark);
 }
  .our-team-soc-icon{
@@ -415,16 +412,19 @@ color: #2E2F42
   border:1px solid#8E8F99;
   border-radius: 4px;
 } 
-.customers-link:hover{
+.customers-link:hover,
+.customers-link:focus{
   border-color: var(--primery-brand-color);
 }
-.customers-link:hover .customers-icon{
+.customers-link:hover
+/* .customers-link:focus*/ .customers-icon{ 
   fill:var(--primery-brand-color);
 }
   .customers-icon{
     fill:#AFB1B8;
   }
-  .customers-icon:hover{
+  .customers-icon:hover,
+  .customers-icon:focus{
     color:var(--primery-brand-color);
   }
 
@@ -503,7 +503,8 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px
 .portfolio-item{
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
-.portfolio-item:hover
+.portfolio-item:hover,
+.portfolio-item:focus
 {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -561,34 +562,45 @@ margin-top: 16px;
   font-size: 16px;
 font-weight: 500;
 letter-spacing: 0.02em;
-line-height: 1.5px;
+line-height: 1.5;
 color: var(--title-text-light-color);
 /* margin-right: 120px; */
 }
 .media-list{ 
   display: flex;
   gap: 16px;
-  margin-top: 16px;}
+  margin-top: 16px;
+  padding:0;}
 
-  .footer-icon{
-    position: relative;
-    top: 8px;
-    left: 8px;
-  }
-
+  
 .media-item{
-  background-color: rgb(255, 255, 255, 0.1);
+  
   width: 40px;
-  height: 40px;
+  height: 40px; 
   border-radius: 50%;
- 
+  background-color: rgb(255, 255, 255, 0.1);
+}
+/* .media-link{ */
+
+  
+  background-color: rgb(255, 255, 255, 0.1);
+
+.media-link:hover,
+.media-link:focus
+{
+  background-color: var(--success-messages);
+  border-radius:50%;
 }
 
+.footer-icon{
+  position: relative;
+  top: 8px;
+  left: 8px;
+}
 .footer-icon{
   fill:var(--body-background-color);
 
 }
-.media-item:hover,
-.media-item:focus{
-  background-color: var(--success-messages);
-}
+/* .team-soc-link:hover, .team-soc-link:focus{
+  background-color:var(--success-messages);
+} */
