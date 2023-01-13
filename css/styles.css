@@ -108,17 +108,40 @@ color:var(--title-text-color);
  display: inline; 
  padding-top: 24px;
  padding-bottom: 24px;
+ position: relative;
+ transition-property:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 
 .nav-link:hover,
-.nav-link:focus { 
+.nav-link:focus,
+.nav-link.current::after { 
   color: var(--primery-brand-color);
+}
+.nav-list .nav-link:active{
+color:var(--primery-brand-color);
+}
+
+.nav-list .nav-link.current{
+  color:var(--primery-brand-color-dark);
+}
+ .nav-link.current::after{
+
+  content:'';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--primery-brand-color-dark);
+  border-radius: 2px;
+  position:absolute;
+  bottom:-4px;
+  left:0;
 }
 
 .nav-item{
  outline:1px;
  margin-right: 40px;
  display: block;
+
  
 }
 
@@ -146,7 +169,7 @@ color:var(--title-text-color);
   font-size: 16px;
   line-height: 1.5;
   color:var(--description-text-color);
-
+  transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
  .header-tel{
 
@@ -154,7 +177,8 @@ color:var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  color:var(--description-text-color)
+  color:var(--description-text-color);
+  transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
  
 
@@ -204,9 +228,10 @@ background-color: var(--primery-brand-color);
 color:var(--title-text-light-color);
 padding:16px 32px;
 border: none;
- 
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.hero-btn:hover{
+
+.hero-btn:hover {
   background-color:var(--primery-brand-color-dark) ;
   box-shadow:var(--hero-btn-shadow);
 }
@@ -377,6 +402,7 @@ margin-top: 8px;
   display: flex;
   align-items: center;
   justify-content: center; 
+  transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 } 
 .our-team-soc-link:hover,
 .our-team-soc-link:focus{
@@ -432,11 +458,50 @@ color: #2E2F42
 .p {
   font-size: 20px;
 }
+/* Portfolio */
+
 .portfolio{
   padding-top:96px ;
   padding-bottom:120px ;
-  
 }
+.portfolio-top-wrap{
+position: relative;
+
+}
+
+.portfolio-img {
+  position: relative;
+}
+
+.portfolio-item {
+  overflow: hidden;
+}
+
+.portfolio-top-text{
+  font-weight: 400;
+  font-size: 16px;
+  line-height:calc(24/16);
+  letter-spacing: 0.02em;
+  color:#F4F4FD;
+  padding: 40px;
+  background-color: #4D5AE5;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  transform: translateY(100%);
+  transition:  transform 300ms linear;
+  padding: 64px 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+
+}
+
+.portfolio-item:hover .portfolio-top-text {
+  transform: translateY(0);
+}
+
 .portfolio-nav{
  margin-bottom: 72px;
 }
@@ -448,7 +513,6 @@ color: #2E2F42
   justify-content: center;
   
 }
-
 
 .portfolio-btn{ 
 font-weight: 700;
@@ -484,7 +548,11 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px
   padding-right:16px;
   padding-left: 16px;
   border: 1px solid #E7E9FC;
-  border-top: none;
+  border-top: 0;
+  background-color: white;
+  position: relative;
+  z-index: 10;
+ 
 
 }
 
@@ -508,6 +576,10 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px
 {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+/* .overlay{
+  width:100%;
+  height: 100%;
+} */
 
 .portfolio-title{
 font-weight: 700;
@@ -596,4 +668,51 @@ fill:#AFB1B8;
 .footer-icon{
   fill:var(--body-background-color);
 
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 19, 25, 0.439);
+  transition: opacity 300ms linear, visibility 300ms linear;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 408px;
+  min-height: 576px;
+  background-color: #fcfcfc;
+  box-shadow: ;
+  border-radius: 5px;
+  transform: translate(-50%, -50%) scaleX(1);
+  transition: transform 300ms linear;
+}
+.modal-close-icon{
+  fill:black;
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scaleX(0);
+}
+
+.modal-close {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+   width: 30px;
+  height: 30px; 
+  background-color: #9da4bd;
+  border-radius: 50%;
+  border:1px solid rgba(0, 0, 0, 0.1);
+  padding: 8px;
+
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }

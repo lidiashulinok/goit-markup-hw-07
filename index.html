@@ -21,9 +21,9 @@
 
         <ul class="nav-list list link">
 
-          <li class="nav-item"><a class="nav-link link" href="./index.html">Studio</a></li>
+          <li class="nav-item"><a class="nav-link current link" href="./index.html">Studio</a></li>
           <li class="nav-item"><a class="nav-link link" href="./portfolio.html">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link link" href="">Contacts</a></li>
+          <li class="nav-item"><a class="nav-link link" href="#">Contacts</a></li>
         </ul>
       </nav>
 
@@ -41,7 +41,7 @@
 
       <section class="hero">
         <h1 class="hero-title">Effective Solutions for Your Business</h1>
-        <button type="button" class="hero-btn">Order Service</button>
+        <button type="button" class="hero-btn"data-modal-open>Order Service</button>
       </section>
 
       <!--Benefits-->
@@ -401,5 +401,23 @@
 
     </div>
     </footer>
+
+    <!-- Modal window -->
+    <div class="backdrop " data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close" data-modal-close >
+          <svg class="modal-close-icon" width="8" height="8"><use href="./img/icons.svg#icon-modalclose"></use></svg>
+        
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js "></script>
+    <!-- <script src="./modal.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="./modal.js"></script> -->
   </body>
 </html>
+<!-- <svg width="8" height="8">
+          <use href="./img/icons.svg#icon-Vector"></use></svg> -->
