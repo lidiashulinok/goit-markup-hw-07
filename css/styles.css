@@ -699,22 +699,8 @@ transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill:var(--body-background-color);
 
 }
- .visually-hidden{
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0); 
-}
+
 /* SUBSCRIBE */
-.footer-container-subscribe{
-  display: inline;
-  width:456px ;
-  height: 80px;
-}
 
 .subscribe-text {
 	
@@ -776,7 +762,16 @@ color:rgba(255,255,255,0.6);
 .footer-icon-sub:hover{
   fill:var(--title-text-light-color);
 }
-
+.visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0); 
+}  
 
 /* MODAL*/
 
@@ -970,32 +965,31 @@ border-radius: 4px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
+
 .modal-form-check-desc::before{
 display: block;
 content:"";
 width: 16px;
 height: 16px;
-border: 1.25px solid #2E2F42;
+border: 1.25px solid #2E2F42; 
 border-radius: 2px;
 cursor: pointer;
-margin-right: 10px;
+ margin-right: 10px; 
 transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-form-checkbox:checked + .modal-form-check-desc::before{
+.modal-form-check:checked + .modal-form-check-desc:before
+{
+  background-color: var(--primery-brand-color);
   background-image: url(../img/icons/checkt.svg);
   background-repeat:no-repeat;
    align-items: center;
   justify-content: center; 
   background-position: 50% 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-form-checkbox:focus + .modal-form-check-desc::before{
-  border: 1.25px solid var(--primery-brand-color-dark);
-  background-color:var(--primery-brand-color-dark);
-  background-image: url(../img/icons/checkt.svg);
-  background-repeat:no-repeat;
-  background-position: 50% 50%;
-  border-radius: 2px;
+.modal-form-check:focus + .modal-form-check-desc::before{
+border: 1.25px solid #4D5AE5;
 }
  .modal-form-submit{
   align-self: center;
@@ -1017,7 +1011,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250m
 .modal-form-submit:focus{
   background-color:var(--primery-brand-color-dark) ;
   box-shadow:var(--hero-btn-shadow);
-}
+} 
 
 
 
