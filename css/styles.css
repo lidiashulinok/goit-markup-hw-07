@@ -496,7 +496,7 @@ overflow: hidden;
   background-color: rgba(77, 90, 229, 0.900); 
   height: 100%;
   width: 100%;
-  /* z-index: 3; */
+  z-index: 3;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px 32px;
   position: absolute;
@@ -669,7 +669,6 @@ font-weight: 500;
 letter-spacing: 0.02em;
 line-height: 1.5;
 color: var(--title-text-light-color);
-/* margin-right: 120px; */
 }
 .media-list{ 
   display: flex;
@@ -779,7 +778,7 @@ color:rgba(255,255,255,0.6);
 }
 
 
-/* Modal */
+/* MODAL*/
 
  .backdrop {
   position: fixed;
@@ -792,8 +791,6 @@ color:rgba(255,255,255,0.6);
    z-index: 101; 
    
 } 
-
-
 
 .modal {
   position: absolute;
@@ -882,7 +879,7 @@ flex-direction: column;
   display:block;
   font-weight: 400;
 font-size: 12px;
-line-height: 1.6;
+line-height: 1.16;
 margin-bottom:4px;
 
 color: #8E8F99;
@@ -911,26 +908,6 @@ border-radius: 4px;
 .modal-form-input:focus + .input-icon {
   fill: var(--primery-brand-color);
 }
-
-
-/* .modal-form-input-icon{
-  display: flex;
-   position: absolute;
-    top:50%;
-   left:30px;
-   transform: translateY(-50%);
-   width: 18px;
-   height:18px;
-   background-color: #404BBF;
-order: 0;
-flex-grow: 0;
-} */
-
-/* MODAL INPYT??? */
-
-/* .modal-field {
-  margin-bottom: 8px;
-} */
 
 .input-wrap {
   position: relative;
@@ -977,7 +954,7 @@ flex-grow: 0;
   line-height:calc( 16 / 12);
   letter-spacing: 0.04em;
   color: rgba(117, 117, 117, 0.5);
-  /* text-transform: uppercase; */
+  
 }
 .modal-form-check-desc{
   display: flex;
@@ -993,7 +970,6 @@ flex-grow: 0;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
 .modal-form-check-desc::before{
 display: block;
 content:"";
@@ -1006,17 +982,15 @@ margin-right: 10px;
 transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-checkbox:checked + .modal-form-check-desc::before{
-  /* background-color:var(--primery-brand-color-dark); */
   background-image: url(../img/icons/checkt.svg);
   background-repeat:no-repeat;
    align-items: center;
   justify-content: center; 
   background-position: 50% 50%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
 }
 .modal-form-checkbox:focus + .modal-form-check-desc::before{
-  border: 1.25px solid #404BBF;
+  border: 1.25px solid var(--primery-brand-color-dark);
   background-color:var(--primery-brand-color-dark);
   background-image: url(../img/icons/checkt.svg);
   background-repeat:no-repeat;
