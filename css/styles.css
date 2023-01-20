@@ -656,8 +656,8 @@ width: 264px;
 margin-top: 16px;
 }
 .footer-box{
-  display:flex;
-  justify-content: start;
+   display:flex;
+  justify-content: start; 
   
 }
 .social{
@@ -837,7 +837,7 @@ color:rgba(255,255,255,0.6);
 
 .modal-close:hover,
 .modal-close:focus{
-border-color:1px solid rgba(0, 0, 0, 0.1);
+border: 1px solid rgba(0, 0, 0, 0.1);
 background:var(--primery-brand-color-dark);
 }
 .modal-close:hover .modal-close-icon,
