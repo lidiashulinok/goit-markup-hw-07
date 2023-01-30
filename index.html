@@ -39,7 +39,7 @@
           </ul>
         </nav>
         <button type="button" class="mobile-menu-btn js-open-menu">
-          <svg class="mobile-menu-icon" width="32" height="22">
+          <svg class="mobile-menu-icon" width="32" height="32">
             <use href="./img/icons.svg#icon-hamburger"></use>
           </svg>
         </button>
@@ -237,13 +237,11 @@
           <ul class="team-list list">
             <li class="team-list-card">
               <img
-              srcset="./img/our-team/guerrero.jpg 2x"
-              src="./img/our-team/guerrero@2x.jpg"
-               
+              srcset="./img/our-team/guerrero@2x.jpg 2x"
+              src="./img/our-team/guerrero.jpg"
                 alt="foto Mark Guerrero"
                 width="264"
-                height="260"
-                .
+                height="260" 
               />
               <div class="titte-team-card">
                 <h3 class="title">Mark Guerrero</h3>
@@ -286,8 +284,7 @@
                 src="./img/our-team/tom2.jpg"
                 alt="foto Tom Ford"
                 width="264"
-                height="260"
-                
+                height="260" 
               />
               <div class="titte-team-card">
                 <h3 class="title">Tom Ford</h3>
@@ -419,14 +416,14 @@
           <ul class="company-list list">
             <li class="company-item">
               <a class="company-link link" href="#">
-                <svg class="company-icon" width="41" height="47">
+                <svg class="company-icon" width="104" height="56">
                   <use href="./img/icons.svg#icon-firstlogo"></use>
                 </svg>
               </a>
             </li>
             <li class="company-item">
               <a class="company-link link" href="">
-                <svg class="company-icon" width="40" height="52">
+                <svg class="company-icon" width="104" height="56">
                   <use
                     href="./img/icons.svg#icon-logoone"
                   ></use>
@@ -435,14 +432,14 @@
             </li>
             <li class="company-item">
               <a class="company-link link" href="">
-                <svg class="company-icon" width="44" height="41">
+                <svg class="company-icon" width="104" height="56">
                   <use href="./img/icons.svg#icon-logotwo"></use>
                 </svg>
               </a>
             </li>
             <li class="company-item">
               <a class="company-link link" href="">
-                <svg class="company-icon" width="84" height="41">
+                <svg class="company-icon" width="104" height="56">
                   <use
                     href="./img/icons.svg#icon-logothree"
                   ></use>
@@ -451,14 +448,14 @@
             </li>
             <li class="company-item">
               <a class="company-link link" href="">
-                <svg class="company-icon" width="63" height="45">
+                <svg class="company-icon" width="104" height="56">
                   <use href="./img/icons.svg#icon-logofour"></use>
                 </svg>
               </a>
             </li>
             <li class="company-item">
               <a class="company-link link" href="">
-                <svg class="company-icon" width="93" height="44">
+                <svg class="company-icon" width="104" height="56">
                   <use href="./img/icons.svg#icon-logofive"></use>
                 </svg>
               </a>
@@ -514,8 +511,9 @@
             </ul>
           </div>
         </div>
-        <form class="subscribe-form" action="">
-          <form role="group" aria-labelledby="subscribe">
+    
+       <form class="subscribe-form" >
+         
             <p class="subscribe-title" id="subscribe">Subscribe</p>
             <div class="subscribe-row">
               <label class="subscribe-field">
@@ -534,78 +532,83 @@
                 </svg>
               </button>
             </div>
-          </form>
+          <!-- </form> -->
         </form>
       </div>
     </footer>
     <!-- Modal-window -->
-     <div class="backdrop is-hidden " data-modal>
+    <div class="backdrop is-hidden " data-modal>
       <div class="modal">
-        <button type="button" data-modal-close class="modal-button">
-          <svg class="modal-button-icon" width="8" height="8">
-            <use href="./img/icons.svg#icon-close-black"></use>
-          </svg>
+        <button type="button" class="modal-close" data-modal-close >
+          <svg class="modal-close-icon" width="8" height="8"><use href="./img/icons.svg#icon-close-black"></use></svg>
         </button>
-        <form class="form" action="">
-          <div role="group" aria-labelledby="contact-callback">
-            <p class="form-title" id="contact-callback">
-              Leave your contacts and we will call you back
-            </p>
-            <label class="form-field">
-              <p class="form-label">Name</p>
-              <span class="form-input-wraper">
-                <input
-                  class="form-input"
-                  type="text"
-                  name="name"
-                  required
-                  pattern="[a-zA-Z]+"
-                />
-                <svg class="form-icon" height="24" width="18">
-                  <use href="./img/icons.svg#icon-person"></use>
-                </svg>
-              </span>
-            </label>
-            <label class="form-field">
-              <p class="form-label">Phone</p>
-              <span class="form-input-wraper">
-                <input class="form-input" type="tel" name="tel" required />
-                <svg class="form-icon" height="24" width="18">
-                  <use href="./img/icons.svg#icon-phone"></use>
-                </svg>
-              </span>
-            </label>
-            <label class="form-field">
-              <p class="form-label">Email</p>
-              <span class="form-input-wraper">
-                <input class="form-input" type="email" name="email" required />
-                <svg class="form-icon" height="24" width="18">
-                  <use href="./img/icons.svg#icon-email"></use>
-                </svg>
-              </span>
-            </label>
-            <label class="form-field">
-              <p class="form-label">Comment</p>
-              <textarea
-                class="comment"
-                name="comment"
-                placeholder="Text input"
-              ></textarea>
-            </label>
-            <label class="form-policy">
-              <input class="checkbox" type="checkbox" name="privacy-policy" />
-              <span class="icon-policy"></span>
-              <p class="form-label">
-                I accept the terms and conditions of the
-                <a class="privacy-policy-link" href="">Privacy Policy</a>
-              </p>
-            </label>
-            <button class="form-btn" type="submit">Send</button>
-          </div>
-        </form>
+       <p class="modal-title">Leave your contacts and we will call you back</p>
+      <form class="modal-form">
+      
+      <div class="modal-field">
+      <label  class="modal-form-field"><span class="modal-form-input-desc">  Name  </span></label>
+      <div class="input-wrap">
+      <input
+      type="text" 
+      name="user_name"
+      class="modal-form-input" 
+      required
+      pattern="[a-zA-Za]+"
+      minlength="2"
+      />
+      <svg class="input-icon" width="18" height="18">
+        <use href="./img/icons.svg#icon-person"></use>
+      </svg>
       </div>
-    </div>
-
+      </div>
+      <div class="modal-field">
+      <label  class="modal-form-field"><span class="modal-form-input-desc">  Phone  </span></label>
+      <div class="input-wrap">
+      <input type="text"
+      name="user_phone" 
+      class="modal-form-input"
+       required
+       pattern="[0-9]{1}-[0-9]{1}-[0-9]{2}-[0-9]{2}"
+       title="xx-xxx-xxx-xx-xx"/>
+      <svg class="input-icon" width="18" height="18">
+        <use href="./img/icons.svg#icon-phone"></use>
+      </svg>
+      </div>
+      </div>
+      <div class="modal-field">
+      <label  class="modal-form-field"><span class="modal-form-input-desc">  Email </span></label>
+      <div class="input-wrap">
+      <input
+       type="email" 
+         name="user_email" 
+          class="modal-form-input"
+          required
+          pattern=" /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/"
+          title="xxxxx@gmail.com"
+        />
+      <svg class="input-icon" width="18" height="18">
+        <use href="./img/icons.svg#icon-email"></use>
+      </svg>
+      </div>
+      </div>
+      <label class="modal-form-field">
+      <span class="modal-form-input-desc"> Comment </span>
+      <textarea
+      name="user_comment"
+      class="modal-form-comment"
+      placeholder="Text input"></textarea>
+      </label>
+      <input  id="user-policy"
+      type="checkbox"
+      name="user_policy"
+      class="modal-form-check visually-hidden">
+      <label  for="user-policy" class="modal-form-check-desc"
+      >I accept the terms and conditions of the&nbsp; <a href="#">Privacy Policy</a>
+      </label>
+      <button  type="submit" class="modal-form-submit">Send</button>
+      </form>
+      </div>
+      </div>
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
   </body>
