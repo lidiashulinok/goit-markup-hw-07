@@ -305,6 +305,7 @@ body {
   .mobile-menu-btn {
     display: none;
   }
+  /* link for site navigation */
   .site-nav .link {
     position: relative;
     display: block;
